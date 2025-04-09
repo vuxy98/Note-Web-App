@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: noteapp
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn website:app
+    plan: free
